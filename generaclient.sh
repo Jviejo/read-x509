@@ -9,8 +9,8 @@ openssl req \
 openssl x509 \
 	-req \
 	-in alice_csr.pem \
-	-CA cert.pem \
-	-CAkey key.pem \
+	-CA rootCA.crt \
+	-CAkey rootCA.key \
 	-out alice_cert.pem \
 	-set_serial 01 \
 	-days 365
